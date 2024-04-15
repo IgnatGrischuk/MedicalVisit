@@ -23,7 +23,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
-AUTH_USER_MODEL = 'users.CustomUser'
+AUTH_USER_MODEL = 'medical.CustomUser'
 
 # Application definition
 
@@ -37,7 +37,7 @@ INSTALLED_APPS = [
     'account',
     'rest_framework',
     'djoser',
-    'users',
+    'medical',
 ]
 
 MIDDLEWARE = [
@@ -139,9 +139,9 @@ SIMPLE_JWT = {
 }
 
 DJOSER = {
-    'PASSWORD_RESET_CONFIRM_URL': 'users/password/reset/confirm/{uid}/{token}',
-    'USERNAME_RESET_CONFIRM_URL': 'users/username/reset/confirm/{uid}/{token}',
-    'ACTIVATION_URL': 'users/activate/{uid}/{token}',
+    'PASSWORD_RESET_CONFIRM_URL': 'medical/password/reset/confirm/{uid}/{token}',
+    'USERNAME_RESET_CONFIRM_URL': 'medical/username/reset/confirm/{uid}/{token}',
+    'ACTIVATION_URL': 'medical/activate/{uid}/{token}',
     'SEND_ACTIVATION_EMAIL': True,
     'SERIALIZERS': {},
     'TOKEN_MODEL': None,
